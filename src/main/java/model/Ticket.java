@@ -2,8 +2,10 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Ticket {
     private String origin;
@@ -18,19 +20,19 @@ public class Ticket {
 
     @JsonProperty("departure_date")
     @JsonFormat(pattern = "dd.MM.yy")
-    private LocalDate departureDate;
+    private String departureDate;
 
     @JsonProperty("departure_time")
     @JsonFormat(pattern = "HH:mm")
-    private LocalDate departureTime;
+    private String departureTime;
 
     @JsonProperty("arrival_date")
     @JsonFormat(pattern = "dd.MM.yy")
-    private LocalDate arrivalDate;
+    private String arrivalDate;
 
     @JsonProperty("arrival_time")
     @JsonFormat(pattern = "HH:mm")
-    private LocalDate arrivalTime;
+    private String arrivalTime;
 
     private String carrier;
     private int stops;
@@ -40,10 +42,10 @@ public class Ticket {
                   String originName,
                   String destination,
                   String destinationName,
-                  LocalDate departureDate,
-                  LocalDate departureTime,
-                  LocalDate arrivalDate,
-                  LocalDate arrivalTime,
+                  String departureDate,
+                  String departureTime,
+                  String arrivalDate,
+                  String arrivalTime,
                   String carrier,
                   int stops,
                   int price) {
@@ -96,35 +98,35 @@ public class Ticket {
         this.destinationName = destinationName;
     }
 
-    public LocalDate getDepartureDate() {
+    public String getDepartureDate() {
         return departureDate;
     }
 
-    public void setDepartureDate(LocalDate departureDate) {
+    public void setDepartureDate(String departureDate) {
         this.departureDate = departureDate;
     }
 
-    public LocalDate getDepartureTime() {
+    public String getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(LocalDate departureTime) {
+    public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
     }
 
-    public LocalDate getArrivalDate() {
+    public String getArrivalDate() {
         return arrivalDate;
     }
 
-    public void setArrivalDate(LocalDate arrivalDate) {
+    public void setArrivalDate(String arrivalDate) {
         this.arrivalDate = arrivalDate;
     }
 
-    public LocalDate getArrivalTime() {
+    public String getArrivalTime() {
         return arrivalTime;
     }
 
-    public void setArrivalTime(LocalDate arrivalTime) {
+    public void setArrivalTime(String arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 
