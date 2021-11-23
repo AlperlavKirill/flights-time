@@ -2,10 +2,6 @@ package model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 public class Ticket {
     private String origin;
