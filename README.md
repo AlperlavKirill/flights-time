@@ -12,3 +12,11 @@
 
 Программа должна вызываться из командной строки Linux,
 результаты должны быть представлены в текстовом виде.
+
+##HOWTO
+
+- run with `java -jar flights-time.jar`
+
+##Proving picture
+
+<img src="././images/running.png">
