@@ -3,6 +3,7 @@ import service.JSONService;
 import service.TicketService;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 public class Main {
@@ -16,11 +17,18 @@ public class Main {
     public static void main(String[] args) {
         try {
             List<Ticket> tickets = JSONService.getListFromJson(JSON_FILE, JSON_ARRAY_NAME);
-            System.out.println(TicketService.calculateAverageTime(tickets, ARRIVAL, DEPARTURE));
-            System.out.println(TicketService.calculatePercentile(tickets, PERCENTILE, ARRIVAL, DEPARTURE));
+            System.out.println("Среднее время полета между Владивостоком и Тель-Авивом составляет:\n"
+                    + beautyOutput(TicketService.calculateAverageTime(tickets, ARRIVAL, DEPARTURE)));
+            System.out.println("90-й перцентиль времени между Владивостоком и Тель-Авивом составляет:\n"
+                    + beautyOutput(TicketService.calculatePercentile(tickets, PERCENTILE, ARRIVAL, DEPARTURE)));
         } catch (IOException e) {
             System.err.println("error parsing json file");
             System.exit(1);
         }
+    }
+
+    private static String beautyOutput(int minutes) {
+        Duration duration = Duration.ofMinutes(minutes);
+        return duration.toHoursPart() + " часов " + duration.toMinutesPart() + " минут.";
     }
 }
