@@ -1,4 +1,7 @@
 ![Repository Top Language](https://img.shields.io/badge/java-100%25-orange)
+![GitHub contributors](https://img.shields.io/badge/contributors-1-green)
+![GitHub last commit](https://img.shields.io/badge/last%20commit-november-yellowgreen)
+![Simply the best ;)](https://img.shields.io/badge/simply-the%20best%20%3B%29-blue)
 
 
 # flights-time
