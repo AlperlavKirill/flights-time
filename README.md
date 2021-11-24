@@ -1,3 +1,6 @@
+![Repository Top Language](https://img.shields.io/badge/java-100%25-orange)
+
+
 # flights-time
 
 ## Task description
